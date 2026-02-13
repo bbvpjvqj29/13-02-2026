@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cupón</title>
+<script>
+function verificarFecha() {
+  const hoy = new Date();
+  const dia = hoy.getDate();
+  const mes = hoy.getMonth() + 1;
+
+  if (dia === 14 && mes === 2) {
+    document.getElementById("contenido").style.display = "block";
+    document.getElementById("mensaje").style.display = "none";
+  }
+}
+</script>
+</head>
+
+<body onload="verificarFecha()" style="text-align:center; font-family:sans-serif; background:#fff0f5;">
+
+<audio autoplay loop>
+  <source src="TQMQA.mp3" type="audio/mpeg">
+</audio>
+
+<h2 id="mensaje">💌 Este cupón se abre el 14 de febrero 💌</h2>
+
+<div id="contenido" style="display:none;">
+  <h1>🎟️ Cupón del Amor 🎟️</h1>
+  <p>Vale por una cita inolvidable ❤️</p>
+
+  <a href="carta.html">
+    <button style="font-size:18px; padding:10px 20px;">Abrir carta</button>
+  </a>
+</div>
+
+</body>
+</html>
