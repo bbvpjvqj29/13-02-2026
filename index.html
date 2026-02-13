@@ -2,131 +2,19 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tu regalo 💖</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(#020111, #191621);
-  color: white;
-  text-align: center;
-}
-
-.stars {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url("https://www.transparenttextures.com/patterns/stardust.png");
-  animation: moveStars 60s linear infinite;
-}
-
-@keyframes moveStars {
-  from {background-position: 0 0;}
-  to {background-position: 1000px 1000px;}
-}
-
-.container {
-  padding: 40px 20px;
-}
-
-.cupon {
-  background: #ffd4e6;
-  color: #000;
-  padding: 20px;
-  border-radius: 15px;
-  display: none;
-  margin-bottom: 20px;
-}
-
-.carta {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
-  display: none;
-  margin-bottom: 20px;
-}
-
-button {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
-  background: white;
-  cursor: pointer;
-  font-size: 16px;
-}
-</style>
+<title>¿Quieres ser mi 14 de febrero?</title>
 </head>
+<body style="text-align:center; font-family:sans-serif; background:#ffe6f0;">
 
-<body>
+<audio autoplay loop>
+  <source src="TQMQA.mp3" type="audio/mpeg">
+</audio>
 
-<div class="stars"></div>
+<h1>¿Quieres ser mi 14 de febrero? 💘</h1>
 
-<div class="container">
-  <h1>Para nosotros 💫</h1>
-
-  <!-- Botón -->
-  <button onclick="mostrarSorpresa()">Abrir Cupón 🎁</button>
-
-  <!-- Mensaje de bloqueo -->
-  <p id="mensajeBloqueo"></p>
-
-  <!-- Cupón -->
-  <div class="cupon" id="cupon">
-    <h2>💌 Cupón para Parapente</h2>
-    <p>Canjeable en marzo ✨</p>
-    <p>Una experiencia juntos que nunca olvidaremos 💕</p>
-  </div>
-
-  <!-- Carta -->
-  <div class="carta" id="carta">
-    <p>
-      Recuerdo la primera vez que nos vimos hace dos años, después de tanto tiempo sin coincidir.
-      Fue una salida espectacular, y supe ahí que siempre ibas a ser tú.
-    </p>
-    <p>
-      Amo todo de ti, no hay detalle que se me escape.
-      Contigo todo se siente más real, como si el mundo por fin tuviera sentido.
-    </p>
-    <p>
-      El parapente es un salto extraño… como lanzarse al vacío con el corazón acelerado,
-      confiando en que el viento nos sostendrá.
-      Así se siente amarte: una mezcla de vértigo, emoción y libertad.
-    </p>
-    <p>
-      Más que un regalo, quiero que sea un recuerdo inolvidable,
-      una experiencia que quede para siempre en nuestra historia.
-    </p>
-  </div>
-
-  <!-- Música -->
-  <iframe
-    src="https://open.spotify.com/embed/track/0Xm7WesKiHAAbLYluGqBZ7?autoplay=1"
-    width="100%"
-    height="80"
-    frameborder="0"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-  </iframe>
-
-</div>
-
-<script>
-function mostrarSorpresa() {
-  const hoy = new Date();
-  const fechaApertura = new Date(hoy.getFullYear(), 1, 14); // 14 de febrero
-
-  if (hoy < fechaApertura) {
-    document.getElementById("mensajeBloqueo").innerHTML =
-      "⏳ Este cupón solo puede abrirse el 14 de febrero 💖";
-    return;
-  }
-
-  document.getElementById("mensajeBloqueo").innerHTML = "";
-  document.getElementById("cupon").style.display = "block";
-  document.getElementById("carta").style.display = "block";
-}
-</script>
+<a href="cupon.html">
+  <button style="font-size:20px; padding:10px 20px;">Abrir sorpresa</button>
+</a>
 
 </body>
 </html>
